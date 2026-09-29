@@ -26,7 +26,7 @@ Sistema web desarrollado en PHP y Docker para la consulta y generación en tiemp
 
 # Estructura del Proyecto
 
-
+```text
 .
 ├── admin/                     # Panel de administración (subida y gestión de plantillas)
 │   ├── guardar_plantilla.php
@@ -45,6 +45,7 @@ Sistema web desarrollado en PHP y Docker para la consulta y generación en tiemp
 ├── generar_pdf.php            # Script de renderizado y descarga de certificados PDF
 ├── index.php                  # Portal público de consulta
 └── README.md
+```
 
 Requisitos Previos
 Docker y Docker Compose instalados.
