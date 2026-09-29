@@ -1,0 +1,284 @@
+/* GLOBALES */
+:root {
+    --brand-dark: #1e293b;
+    --brand-primary: #5686FE;
+    --brand-primary-hover: #4372e6;
+    --brand-accent-yellow: #f59e0b;
+    --title-color: #243351;
+    --subtitle-color: #4D525B;
+    --text-dark: #243351;
+    --text-muted: #4D525B;
+    --border-soft: #e2e8f0;
+}
+
+/* Base */
+body {
+    background-color: #f6f8fc;
+    color: var(--text-dark);
+}
+
+/* EFECTO DE FONDO*/
+
+.bg-blur-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+    background-color: #f4f7fc;
+    /* Base clara institucional */
+    pointer-events: none;
+}
+
+.glow-orb {
+    position: absolute;
+    filter: blur(60px);
+    opacity: 0.55;
+    mix-blend-mode: multiply;
+}
+
+.orb-1 {
+    top: -10%;
+    right: -5%;
+    width: 55vw;
+    height: 65vh;
+    background: radial-gradient(circle, #60a5fa 0%, #a5bbfd 60%, transparent 100%);
+    border-radius: 40% 60% 70% 30% / 50% 30% 70% 50%;
+    /* Forma orgánica irregular */
+    transform: rotate(-15deg);
+}
+
+.orb-2 {
+    top: 25%;
+    left: -15%;
+    width: 50vw;
+    height: 55vh;
+    background: radial-gradient(circle, #93c5fd 0%, #c7d2fe 70%, transparent 100%);
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: rotate(25deg);
+}
+
+.orb-3 {
+    bottom: -15%;
+    right: 15%;
+    width: 60vw;
+    height: 50vh;
+    background: radial-gradient(circle, #bfdbfe 0%, #e0e7ff 80%, transparent 100%);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+/*ENCABEZADO Y HERO BADGE*/
+.hero-title {
+    font-family: Montserrat, sans-serif !important;
+    font-size: 2.75rem;
+    font-weight: 600 !important;
+    letter-spacing: -0.02em;
+    color: #243351 !important;
+}
+
+.hero-title .title-accent {
+    font-family: Montserrat, sans-serif !important;
+    font-weight: 600 !important;
+    color: var(--brand-primary) !important;
+}
+
+.text-hero-subtitle,
+p {
+    color: var(--subtitle-color);
+}
+
+.hero-badge {
+    color: var(--title-color);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* MAIN CARD */
+.main-card {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 24px;
+    box-shadow:
+        0 20px 40px -15px rgba(0, 0, 0, 0.08),
+        inset 0 1px 1px 0 rgba(255, 255, 255, 0.8);
+
+    color: var(--text-dark);
+    overflow: hidden;
+}
+
+.main-card h4,
+.main-card h6 {
+    color: var(--title-color);
+}
+
+/*CONTROLES DE FORMULARIO */
+.form-label-custom {
+    color: var(--subtitle-color);
+    letter-spacing: 0.5px;
+}
+
+.text-accent {
+    color: var(--brand-primary);
+}
+
+.form-control-modern,
+.form-select-modern {
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 12px 18px;
+    font-weight: 600;
+    color: var(--title-color);
+    transition: all 0.25s ease;
+}
+
+.form-control-modern:focus,
+.form-select-modern:focus {
+    border-color: var(--brand-accent-yellow) !important;
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.25) !important;
+    outline: none;
+}
+
+/*BOTONES*/
+.blue-gradient,
+.btn-modern {
+    background: var(--brand-primary);
+    color: #ffffff;
+    border: none;
+    border-radius: 14px;
+    padding: 12px 24px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 14px rgba(86, 134, 254, 0.35);
+    cursor: pointer;
+}
+
+.btn-search {
+    border-radius: 12px;
+    padding: 0 1.25rem;
+}
+
+.btn-modern:hover,
+.btn-search:hover {
+    background: var(--brand-primary-hover);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(86, 134, 254, 0.45);
+    filter: brightness(1.05);
+}
+
+.btn-modern:active,
+.btn-search:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(86, 134, 254, 0.3);
+}
+
+.btn-clear {
+    background: #f1f5f9;
+    color: var(--subtitle-color);
+    border: 1px solid var(--border-soft);
+    border-radius: 14px;
+    padding: 12px 20px;
+    font-weight: 700;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.btn-clear:hover {
+    background: #e2e8f0;
+    color: var(--title-color);
+}
+
+.btn-download-pdf {
+    background: var(--brand-dark);
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.25s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-download-pdf:hover {
+    background: var(--brand-primary);
+    color: #ffffff;
+    box-shadow: 0 6px 18px rgba(86, 134, 254, 0.35);
+}
+
+/*COMPONENTES Y RESULTADOS*/
+.badge-role {
+    background: #fef3c7;
+    color: #92400e;
+    font-weight: 700;
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-edicion {
+    background: #e0f2fe;
+    color: #0369a1;
+    font-weight: 700;
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+.cert-item {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid var(--border-soft);
+    transition: all 0.2s ease;
+}
+
+.cert-item:hover {
+    background: #ffffff;
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.alert-custom {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+    border-radius: 14px;
+    font-weight: 600;
+}
+
+/*FOOTER*/
+.footer-institutional {
+    padding: 24px 0;
+    margin-top: auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(12px);
+}
+
+.footer-text {
+    color: var(--subtitle-color);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.footer-subtext {
+    color: #64748b;
+    font-size: 0.775rem;
+}

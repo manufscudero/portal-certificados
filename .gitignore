@@ -1,0 +1,37 @@
+# ==========================================
+# Archivos de Configuración y Credenciales
+# ==========================================
+config/db.php
+.env
+
+# ==========================================
+# Datos Persistentes de Docker y MySQL
+# ==========================================
+mysql_data/
+/db_data/
+*.sql
+
+# ==========================================
+# Archivos Generados Dinámicamente o Uploads
+# ==========================================
+/uploads/
+/pdf_generados/
+*.pdf
+
+# ==========================================
+# Dependencias de PHP (Composer)
+# ==========================================
+/vendor/
+
+# ==========================================
+# Configuración de IDEs y Editores
+# ==========================================
+.vscode/
+.idea/
+*.swp
+
+# ==========================================
+# Archivos de Sistema Operativo
+# ==========================================
+.DS_Store
+Thumbs.db
